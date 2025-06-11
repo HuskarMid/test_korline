@@ -1,6 +1,7 @@
 import { NextConfig } from 'next';
 
 const config: NextConfig = {
+  output: 'export',
   env: {
     NYT_API_KEY: process.env.NYT_API_KEY,
   },
