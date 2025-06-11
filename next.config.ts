@@ -1,7 +1,17 @@
-import type { NextConfig } from "next";
+import { NextConfig } from 'next';
 
-const nextConfig: NextConfig = {
-  /* config options here */
+const config: NextConfig = {
+  env: {
+    NYT_API_KEY: process.env.NYT_API_KEY,
+  },
+  async rewrites() {
+    return [
+      {
+        source: '/api/news/:path*',
+        destination: 'https://api.nytimes.com/svc/archive/v1/:path*',
+      },
+    ];
+  },
 };
 
-export default nextConfig;
+export default config;

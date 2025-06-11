@@ -1,0 +1,37 @@
+.NewsItem {
+    padding: 0 0 16px 111px;
+    margin-top: 11px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    border-bottom: 1px solid rgba(237, 237, 237, 1);
+    position: relative;
+    cursor: pointer;
+
+    & h1 {
+        color: rgba(9, 111, 250, 1);
+        font-family: Lato;
+        font-weight: 800;
+        font-size: 14px;
+        line-height: 100%;
+        letter-spacing: 0%;
+    }
+
+    & p {
+        font-family: Lato;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 22px;
+        letter-spacing: 0%;
+        color: rgba(0, 0, 0, 1);
+    }
+
+    & span {
+        font-family: Lato;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 100%;
+        letter-spacing: 0%;
+        color: rgba(109, 120, 122, 1);
+    }
+}

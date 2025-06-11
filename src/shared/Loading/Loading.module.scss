@@ -1,0 +1,42 @@
+.loader {
+  position: relative;
+  z-index: 100;
+  width: 80px;
+  height: 80px;
+  margin: 0 auto;
+}
+
+.dot {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  background-color: #3498db;
+  border-radius: 50%;
+  left: 50%;
+  top: 50%;
+  margin-left: -6px;
+  margin-top: -6px;
+  animation: pulse 1.5s ease-in-out infinite;
+}
+
+@for $i from 1 through 8 {
+  .dot:nth-child(#{$i}) {
+    animation-delay: #{$i * 0.2}s;
+    transform: rotate(#{$i * 45}deg) translateY(-30px);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: rotate(var(--rotation)) translateY(-30px) scale(0.5);
+    opacity: 0.3;
+  }
+  50% {
+    transform: rotate(var(--rotation)) translateY(-30px) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: rotate(var(--rotation)) translateY(-30px) scale(0.5);
+    opacity: 0.3;
+  }
+}

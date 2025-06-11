@@ -1,0 +1,61 @@
+.navbar {
+    font-family: Lato;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 100%;
+    letter-spacing: 10%;
+    text-align: center;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    width: 100%;
+    top:0;
+    height: 72px;
+    border-bottom: 1px solid rgba(237, 237, 237, 1);
+    background-color: #fff;
+    z-index: 10;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    background-color: rgb(255, 255, 255);
+    width: 100vw;
+    height: 100vh;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-in-out;
+    pointer-events: auto;
+
+    &.active {
+        transform: translateX(0);
+    }
+
+    & ul {
+        display: flex;
+        flex-direction: column;
+        gap: 28px;
+        margin-top: 145px;
+        padding-left: 20px;
+    }
+
+    & li {
+        font-family: Lato;
+        font-weight: 700;
+        font-size: 22px;
+        line-height: 100%;
+        letter-spacing: 2px;
+        color: #000000;
+        text-decoration: none;
+        list-style: none;
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
+
+        &:hover {
+            color: #000000;
+        }
+    }
+}
